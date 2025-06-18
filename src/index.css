@@ -21,7 +21,7 @@ body.no-scroll {
 @theme {
   --font-helve: "helve-light";
   --font-helve-italic: "helve-italic";
-  --font-helve-roman: "helve-roman"; 
+  --font-helve-roman: "helve-roman";
   --font-inter-bold: "inter-bold";
   --font-inter-extrabold: "inter-extrabold";
   --font-inter-medium: "inter-medium";
@@ -50,22 +50,22 @@ body.no-scroll {
     font-family: "inter-bold";
     src: url("/fonts/Inter-Bold.ttf") format("truetype");
   }
-  
+
   @font-face {
     font-family: "inter-extrabold";
     src: url("/fonts/Inter-ExtraBold.ttf") format("truetype");
   }
-  
+
   @font-face {
     font-family: "inter-medium";
     src: url("/fonts/Inter-Medium.ttf") format("truetype");
   }
-  
+
   @font-face {
     font-family: "inter-regular";
     src: url("/fonts/Inter-Regular.ttf") format("truetype");
   }
-  
+
   @font-face {
     font-family: "inter-semibold";
     src: url("/fonts/Inter-SemiBold.ttf") format("truetype");
@@ -87,6 +87,32 @@ body.no-scroll {
 
   .floating-nav {
     @apply rounded-lg border backdrop-blur-lg;
+  }
+
+  .hero-heading {
+    @apply w-[70%] md:w-full text-[#111827] font-inter-bold text-3xl sm:right-10 lg:text-6xl;
+  }
+
+  .animated-hero-heading {
+    @apply md:transform-(--hero-heading) md:origin-(--hero-heading-origin) md:will-change-(--will-change);
+  }
+
+  .animated-hero-desc {
+    transform: translate(-20px, -31px);
+    transform-origin: left -90% !important;
+    will-change: var(--will-change);
+  }
+
+  .animated-hero-box {
+    transform: translate3d(42px, -62px, -135px);
+    transform-origin: top right 110px !important;
+    will-change: var(--will-change);
+  }
+
+  .animated-hero-image {
+    transform: translate(0, 50%);
+    transform-origin: bottom right 200px !important;
+    will-change: var(--will-change);
   }
 }
 
