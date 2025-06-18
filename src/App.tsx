@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from 'react'
 import Lenis from "lenis/react"
-import { Footer, Hero, Navbar, Partner, Services, Solutions } from './components'
-import { PiDotsSixVertical } from 'react-icons/pi'
+import { Footer, Hero, Integration, Navbar, Partner, Pricings, Services, Solutions, ContactModal, ContactForm } from './components'
 
 function App() {
   const [isLoading, setIsLoading] = useState<boolean>(true)
+  const [isOpen, setIsOpen] = useState<boolean>(false)
   const lenisRef = useRef(null)
 
   useEffect(() => {
@@ -27,7 +27,9 @@ function App() {
     )
   }
 
-  
+  const onClose = () => {
+    setIsOpen(false)
+  }
 
   return (
     <Lenis root
@@ -40,12 +42,15 @@ function App() {
         touchMultiplier: 1.2,
       }} >
       <div className="relative min-h-screen w-screen overflow-x-hidden">
-        <Navbar />
+        <Navbar openModal={(open: boolean | ((prevState: boolean) => boolean)) => setIsOpen(open)} />
         <Hero />
         <Partner />
         <Solutions />
-        <Services/>
+        <Services />
+        <Pricings />
+        <Integration />
         <Footer />
+        <ContactModal isOpen={isOpen} onClose={onClose} children={<ContactForm />} />
       </div>
     </Lenis>
   )
