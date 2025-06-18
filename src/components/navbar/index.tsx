@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import gsap from "gsap";
 import { IoIosCloseCircleOutline } from "react-icons/io"
 import { MdArrowOutward } from "react-icons/md"
@@ -6,11 +6,8 @@ import { RxHamburgerMenu } from "react-icons/rx"
 import { useWindowScroll } from "react-use";
 import { NavLink, useNavigate } from "react-router";
 
-interface NavbarProps {
-  openModal: (open: boolean) => void;
-}
 
-const Navbar: React.FC<NavbarProps> = ({ openModal }) => {
+const Navbar = ({ openModal }) => {
   const [isOpenModal, setIsOpenModal] = useState<boolean>(false)
   const navContainerRef = useRef<HTMLDivElement | null>(null)
   const menuRef = useRef<HTMLDivElement | null>(null)

@@ -42,7 +42,7 @@ function App() {
         touchMultiplier: 1.2,
       }} >
       <div className="relative min-h-screen w-screen overflow-x-hidden">
-        <Navbar openModal={(open: boolean) => setIsOpen(open)} />
+        <Navbar openModal={(open) => setIsOpen(open)} />
         <Hero />
         <Partner />
         <Solutions />
