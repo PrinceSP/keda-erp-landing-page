@@ -6,7 +6,8 @@ import { RxHamburgerMenu } from "react-icons/rx"
 import { useWindowScroll } from "react-use";
 import { NavLink, useNavigate } from "react-router";
 
-const Navbar = () => {
+const Navbar = ({openModal}) => {
+  const [isOpenModal, setIsOpenModal] = useState<boolean>(false)
   const navContainerRef = useRef<HTMLDivElement | null>(null)
   const menuRef = useRef<HTMLDivElement | null>(null)
   const closeBtn = useRef<HTMLButtonElement | null>(null)
@@ -38,6 +39,11 @@ const Navbar = () => {
     gsap.to(closeBtn.current, { rotation: 0, duration: 0.5, ease: 'power2.inOut' })
   }
 
+  const openContactModal = ()=>{
+    setIsOpenModal(true)
+    openModal(isOpenModal)
+  }
+
   useEffect(() => {
     if (currentScrollY === 0) {
       setIsNavVisible(true)
@@ -65,7 +71,7 @@ const Navbar = () => {
       <header className="absolute top-1/2 w-full -translate-y-1/2">
         <nav className="flex size-full items-center justify-between p-4">
           <a href="/" className="flex flex-col text-base leading-4 font-helve-light">
-            <img src="/illustrations/erp-logo.svg"/>
+            <img src="/illustrations/erp-logo.svg" />
           </a>
 
           <div ref={menuRef} className="absolute left-0 top-0 h-screen w-full bg-blue-300 origin-right duration-200 ease-in-out scale-x-0">
@@ -100,7 +106,7 @@ const Navbar = () => {
             }
 
             <div className="flex flex-row gap-9">
-              <button type="button" className="flex items-center btn-outlined font-inter-regular">
+              <button onClick={openContactModal} type="button" className="flex items-center btn-outlined font-inter-regular">
                 <p className="text-[0.875em] mr-2">Contact us</p>
                 <MdArrowOutward color="#FFD700" size="0.875em" />
               </button>
