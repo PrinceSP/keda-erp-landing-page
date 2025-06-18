@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import gsap from "gsap";
 import { IoIosCloseCircleOutline } from "react-icons/io"
 import { MdArrowOutward } from "react-icons/md"
@@ -10,7 +10,7 @@ interface NavbarProps {
   openModal: (open: boolean) => void;
 }
 
-const Navbar = ({ openModal }: NavbarProps) => {
+const Navbar: React.FC<NavbarProps> = ({ openModal }) => {
   const [isOpenModal, setIsOpenModal] = useState<boolean>(false)
   const navContainerRef = useRef<HTMLDivElement | null>(null)
   const menuRef = useRef<HTMLDivElement | null>(null)
