@@ -65,11 +65,9 @@ const Navbar = () => {
       <header className="absolute top-1/2 w-full -translate-y-1/2">
         <nav className="flex size-full items-center justify-between p-4">
           <a href="/" className="flex flex-col text-base leading-4 font-helve-light">
-            <img src="/illustrations/erp-logo.svg" />
+            <img src="/illustrations/erp-logo.svg"/>
           </a>
 
-
-          {/* Burger Menu - Mobile */}
           <div ref={menuRef} className="absolute left-0 top-0 h-screen w-full bg-blue-300 origin-right duration-200 ease-in-out scale-x-0">
             <button ref={closeBtn} className="close absolute left-5 top-5 cursor-pointer border-none" onClick={onCloseMenu} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} onMouseUp={onMouseLeave}>
               <IoIosCloseCircleOutline size="5em" />
