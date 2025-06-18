@@ -19,20 +19,22 @@ const Partner = () => {
   }
   
   return (
-    <div className="w-screen min-h-[40dvh] flex flex-col items-center justify-center mb-20">
-      <p className="font-inter-semibold tracking-[-25%] text-[1.125em] md:text-[2em]">Over 2,000 people & companies use our system</p>
-      <figure className="flex items-center justify-center gap-10 mt-10">
-        {
-          images.map((item) =>
-            <img src={item} key={item.toString()} />
-          )
-        }
-      </figure>
-      <figure className="flex items-center justify-center gap-10 mt-10">
-        {shuffle(images).map((item, index) => (
-          <img src={item} key={`shuffled-${index}`} />
-        ))}
-      </figure>
+    <div className="w-full min-h-[40dvh] flex flex-col items-center justify-center mb-60">
+      <p className="font-inter-semibold tracking-[-25%] text-[1.375em] md:text-[2em] text-center">Over 2,000 people & companies use our system</p>
+      <section className="px-10">
+        <figure className="flex flex-wrap items-center justify-center gap-10 mt-10">
+          {
+            images.map((item) =>
+              <img src={item} key={item.toString()} />
+            )
+          }
+        </figure>
+        <figure className="flex flex-wrap items-center justify-center gap-10 mt-10">
+          {shuffle(images).map((item, index) => (
+            <img src={item} key={`shuffled-${index}`} />
+          ))}
+        </figure>
+      </section>
     </div>
   )
 }
