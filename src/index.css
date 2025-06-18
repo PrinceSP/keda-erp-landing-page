@@ -1,68 +1,137 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import "tailwindcss";
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  width: 100dvw;
+  overflow-x: hidden;
+  background-color: #fff;
+  overscroll-behavior: none;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+body.no-scroll {
+  overflow-y: hidden !important;
+  height: 100vh;
+  position: fixed;
+  width: 100%;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+@theme {
+  --font-helve: "helve-light";
+  --font-helve-italic: "helve-italic";
+  --font-helve-roman: "helve-roman"; 
+  --font-inter-bold: "inter-bold";
+  --font-inter-extrabold: "inter-extrabold";
+  --font-inter-medium: "inter-medium";
+  --font-inter-regular: "inter-regular";
+  --font-inter-semibold: "inter-semibold";
+  --color-dark-primary: #1A1A1A;
+  --color-hero-box: #E3E3E7;
+  --color-floating-nav: #F0F0F0;
+  --hero-heading: translate3d(10px, 51px, -60px) rotateY(20deg) rotateX(-40deg);
+  --hero-heading-origin: -50% 50% 150px;
+  --will-change: opacity, transform;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+@layer base {
+  @font-face {
+    font-family: "helve-light";
+    src: url("/fonts/HelveticaNeueCyr-Light.ttf") format("truetype");
   }
-  a:hover {
-    color: #747bff;
+
+  @font-face {
+    font-family: "helve-roman";
+    src: url("/fonts/HelveticaNeueCyr-Roman.ttf") format("truetype");
   }
-  button {
-    background-color: #f9f9f9;
+
+  @font-face {
+    font-family: "inter-bold";
+    src: url("/fonts/Inter-Bold.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "inter-extrabold";
+    src: url("/fonts/Inter-ExtraBold.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "inter-medium";
+    src: url("/fonts/Inter-Medium.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "inter-regular";
+    src: url("/fonts/Inter-Regular.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "inter-semibold";
+    src: url("/fonts/Inter-SemiBold.ttf") format("truetype");
+  }
+}
+
+@layer utilities {
+  .line-animated {
+    @apply relative text-black after:absolute after:-bottom-0.5 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-neutral-800 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom-left hover:after:scale-x-100 dark:after:bg-black cursor-pointer;
+  }
+
+  .btn-outlined {
+    @apply text-xl px-5 py-2 border-1 border-solid rounded-[10px] hover:cursor-pointer;
+  }
+
+  .nav-hover-btn {
+    @apply font-inter-regular text-base;
+  }
+
+  .floating-nav {
+    @apply rounded-lg border backdrop-blur-lg;
+  }
+}
+
+/* From Uiverse.io by JkHuger */
+/* https: //uiverse.io/JkHuger/light-monkey-24 */
+
+.loading-block {
+  position: relative;
+  box-sizing: border-box;
+  float: left;
+  margin: 0 10px 10px 0;
+  border-radius: 3px;
+  @apply bg-hero-box w-5 h-5;
+}
+
+.loading-block:nth-child(4n+1) {
+  animation: wave_23 1s ease .0s infinite;
+}
+
+.loading-block:nth-child(4n+2) {
+  animation: wave_23 1s ease .2s infinite;
+}
+
+.loading-block:nth-child(4n+3) {
+  animation: wave_23 1s ease .4s infinite;
+}
+
+.loading-block:nth-child(4n+4) {
+  animation: wave_23 1s ease .6s infinite;
+  margin-right: 0;
+}
+
+@keyframes wave_23 {
+  0% {
+    top: 0;
+    opacity: 1;
+  }
+
+  50% {
+    top: 30px;
+    opacity: .2;
+  }
+
+  100% {
+    top: 0;
+    opacity: 1;
   }
 }
