@@ -6,7 +6,11 @@ import { RxHamburgerMenu } from "react-icons/rx"
 import { useWindowScroll } from "react-use";
 import { NavLink, useNavigate } from "react-router";
 
-const Navbar = (openModal: (arg0: boolean) => void) => {
+interface NavbarProps {
+  openModal: (open: boolean) => void;
+}
+
+const Navbar = ({ openModal }: NavbarProps) => {
   const [isOpenModal, setIsOpenModal] = useState<boolean>(false)
   const navContainerRef = useRef<HTMLDivElement | null>(null)
   const menuRef = useRef<HTMLDivElement | null>(null)
@@ -39,7 +43,7 @@ const Navbar = (openModal: (arg0: boolean) => void) => {
     gsap.to(closeBtn.current, { rotation: 0, duration: 0.5, ease: 'power2.inOut' })
   }
 
-  const openContactModal = ()=>{
+  const openContactModal = () => {
     setIsOpenModal(true)
     openModal(isOpenModal)
   }
