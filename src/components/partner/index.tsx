@@ -1,13 +1,6 @@
+import { partnerLogo } from "../../constants";
+
 const Partner = () => {
-  const images = [
-    "/illustrations/airbnb.svg",
-    "/illustrations/hubspot.svg",
-    "/illustrations/google.svg",
-    "/illustrations/microsoft.svg",
-    "/illustrations/airbnb.svg",
-    "/illustrations/walmart.svg",
-    "/illustrations/fedex.svg"
-  ]
 
   function shuffle<T>(array: T[]): T[] {
     const arr = [...array];
@@ -24,13 +17,13 @@ const Partner = () => {
       <section className="px-10">
         <figure className="flex flex-wrap items-center justify-center gap-10 mt-10">
           {
-            images.map((item) =>
+            partnerLogo.map((item) =>
               <img src={item} key={item.toString()} />
             )
           }
         </figure>
         <figure className="flex flex-wrap items-center justify-center gap-10 mt-10">
-          {shuffle(images).map((item, index) => (
+          {shuffle(partnerLogo).map((item, index) => (
             <img src={item} key={`shuffled-${index}`} />
           ))}
         </figure>
