@@ -6,7 +6,7 @@ import { RxHamburgerMenu } from "react-icons/rx"
 import { useWindowScroll } from "react-use";
 import { NavLink, useNavigate } from "react-router";
 
-const Navbar = ({openModal}) => {
+const Navbar = (openModal: (arg0: boolean) => void) => {
   const [isOpenModal, setIsOpenModal] = useState<boolean>(false)
   const navContainerRef = useRef<HTMLDivElement | null>(null)
   const menuRef = useRef<HTMLDivElement | null>(null)
