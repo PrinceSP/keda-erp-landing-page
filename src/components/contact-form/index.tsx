@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { FaTelegramPlane } from 'react-icons/fa'
-import { MdEmail, MdPhoneInTalk } from 'react-icons/md'
+import { MdArrowOutward, MdEmail, MdPhoneInTalk } from 'react-icons/md'
 import { IoLogoWhatsapp } from 'react-icons/io'
 import Button from '../button'
 
@@ -66,6 +66,7 @@ const ContactForm = ({ onSubmit }: ContactFormProps) => {
         id='contact'
         className='bg-[#f1f1f1] rounded-[15px] w-full h-14 p-[25px] placeholder:text-[#BBA4A4] placeholder:font-helve tracking-[-0.7px] mt-6'
       />
+      <Button size="text-xl" family="font-helve-roman tracking-[-0.5px]" title="discuss for info" rightIcon={<MdArrowOutward color="#FFF" size="1.375em" />} containerClass="w-full flex items-center justify-center gap-2 !py-4 bg-[#7C3AED] rounded-full mt-6" />
     </form>
   )
 }
