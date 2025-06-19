@@ -6,11 +6,18 @@ import type { itemProps } from '../../types';
 const Pricings = () => {
   return (
     <div className='py-50 px-5 w-screen min-h-dvh h-auto relative'>
-      <h1 className='text-center text-[#2A2E45] text-[2.875em] font-inter-extrabold'>No Pockets will be Hurt in the Process!</h1>
-      <p className='text-[#585F81] text-center font-inter-regular text-xl'>We have Planned Affordable ERP Solutions that are Designed to Grow Your Business Without Breaking the Bank.</p>
-      <div className='w-full h-auto flex items-start justify-center flex-wrap gap-2 mt-30'>
+      <h1 className='text-left md:text-center text-[#2A2E45] text-4xl md:text-[2.875em] font-inter-extrabold'>No Pockets will be Hurt in the Process!</h1>
+      <p className='text-[#585F81] text-left md:text-center font-inter-regular text-lg md:text-xl'>We have Planned Affordable ERP Solutions that are Designed to Grow Your Business Without Breaking the Bank.</p>
+      <div className='w-full h-auto flex items-start justify-center flex-wrap gap-40 md:gap-2 mt-30'>
         {pricingDatas.map((item: itemProps, index: number) =>
-          <div className="w-[426px] h-[145dvh] rounded-t-xl flex flex-col items-center bg-white">
+          <div className="w-[426px] h-[145dvh] relative rounded-t-xl flex flex-col items-center bg-white">
+            {
+            index === 2 &&
+              <div className='absolute -top-7 border-1 border-[#D1DFF2] px-5 py-2.5 rounded-[6px] shadow-(--proshadow) flex items-center justify-center gap-2 bg-white'>
+                <p className='font-inter-semibold text-base text-[#585F81]'>Everything in</p>
+                <p className='font-inter-semibold text-base text-[#458DF6]'>PRO +</p>
+              </div>
+            }
             <div style={{ backgroundColor: `#${item.bg}` }} className="w-full flex flex-col items-center justify-center gap-3 py-5">
               <img src={item.img} alt={item.tier} />
               <h3 style={{ color: `#${item.color}` }} className="text-center text-2xl font-inter-bold">{item.tier}</h3>
