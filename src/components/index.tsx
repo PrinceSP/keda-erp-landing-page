@@ -8,5 +8,10 @@ import Pricings from "./pricing"
 import Integration from "./integration"
 import ContactModal from "./contact-modal"
 import ContactForm from "./contact-form"
+import SignIn from "./signIn"
+import Register from "./register"
 
-export { Navbar, Footer, Hero, Partner, Solutions, Services, Pricings, Integration, ContactModal, ContactForm }
+export {
+  Navbar, Footer, Hero, Partner, Solutions, Services,
+  Pricings, Integration, ContactModal, ContactForm, SignIn, Register
+}
