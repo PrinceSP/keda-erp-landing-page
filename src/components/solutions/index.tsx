@@ -3,10 +3,10 @@ import Button from "../button"
 
 const Solutions = () => {
   return (
-    <div className="w-screen min-h-dvh relative flex flex-col items-start gap-10 px-20">
+    <div className="w-screen min-h-dvh relative flex flex-col items-start gap-10 px-20 mb-10">
       <div>
-        <h1 className="font-inter-bold text-[1.75em] md:text-[2.875em] text-[#2A2E45]">ERP Solutions Installation Options:</h1>
-        <h1 className="font-inter-bold text-[1.75em] md:text-[2.875em] text-[#2A2E45]">Online Cloud or Thin Offline</h1>
+        <h1 className="font-inter-bold text-3xl md:text-[2.875em] text-[#2A2E45]">ERP Solutions Installation Options:</h1>
+        <h1 className="font-inter-bold text-3xl md:text-[2.875em] text-[#2A2E45]">Online Cloud or Thin Offline</h1>
       </div>
       <article className="w-full flex flex-col-reverse gap-10 md:flex-row items-start justify-between">
         <section className="w-full md:w-2/5 flex flex-col gap-10">
