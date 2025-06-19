@@ -1,7 +1,8 @@
 import { useEffect, useRef } from "react"
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/all'
-// import { FaArrowDown } from "react-icons/fa6"
+import { FaArrowDown } from "react-icons/fa6"
+import Button from "../button"
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -9,7 +10,6 @@ const Hero = () => {
   const heroContainerRef = useRef<null>(null)
   const headlineRef1 = useRef<null>(null)
   const headlineRef2 = useRef<null>(null)
-  // const discoverRef = useRef<null>(null)
 
   const properties = {
     opacity: 1,
@@ -61,7 +61,7 @@ const Hero = () => {
             what to do, why it matters, and how to get it done.
           </p>
 
-          {/* <Button ref={discoverRef} id="discover" title="Get Started" rightIcon={<FaArrowDown />} containerClass="flex gap-3 border-1 border-solid" /> */}
+          <Button id="discover" title="Get Started" rightIcon={<FaArrowDown color="#fff"/>} containerClass="flex items-center gap-3 !py-3 rounded-[10px] bg-[#7C3AED]" />
         </div>
       </section>
     </main>
