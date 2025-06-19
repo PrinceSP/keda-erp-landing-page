@@ -126,11 +126,6 @@ body.no-scroll {
   .shadow-custom-card{
     filter: drop-shadow(0px 6px 21px rgba(42, 46, 69, 0.3));
   }
-
-  .bgblur{
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-  }
 }
 
 /* From Uiverse.io by JkHuger */
