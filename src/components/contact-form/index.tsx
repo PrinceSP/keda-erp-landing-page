@@ -4,7 +4,7 @@ import { MdEmail, MdPhoneInTalk } from 'react-icons/md'
 import { IoLogoWhatsapp } from 'react-icons/io'
 import Button from '../button'
 
-const ContactForm = () => {
+const ContactForm = ({ onSubmit }) => {
   const methods = [
     {
       title: "telegram",
@@ -31,7 +31,7 @@ const ContactForm = () => {
   const [activeMethod, setActiveMethod] = useState<string>(methods[0].title)
 
   return (
-    <form>
+    <form onSubmit={onSubmit} data-testid="contact-form">
       <h1 className='text-[#232323] text-left text-[3.75em] font-helve tracking-[-4px]'>how to reach</h1>
       <p className='text-[#232323] text-left text-lg font-helve-roman tracking-[-0.7px]'>please fill out the form and we will contact you</p>
       <label htmlFor="name" className="block text-base font-helve-roman text-[#232323] tracking-[-0.7px] mt-7">type your name:</label>
