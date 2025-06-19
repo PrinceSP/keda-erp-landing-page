@@ -4,7 +4,11 @@ import { MdEmail, MdPhoneInTalk } from 'react-icons/md'
 import { IoLogoWhatsapp } from 'react-icons/io'
 import Button from '../button'
 
-const ContactForm = ({ onSubmit }) => {
+interface ContactFormProps {
+  onSubmit?: (e: React.FormEvent) => void
+}
+
+const ContactForm = ({ onSubmit }: ContactFormProps) => {
   const methods = [
     {
       title: "telegram",
