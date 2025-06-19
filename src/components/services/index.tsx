@@ -2,7 +2,7 @@ import { servicesDatas } from "../../constants"
 
 const Services = () => {
   return (
-    <div className='w-screen min-h-dvh bg-[#F4F8FF] py-20 px-18'>
+    <div id="services" className='w-screen min-h-dvh bg-[#F4F8FF] py-20 px-18'>
       <h1 className='text-[#2A2E45] text-4xl md:text-[2.875em] font-inter-extrabold w-full md:w-3/4 mb-2.5'>Features that Automate Your Operations During High-Tides!</h1>
       <p className='text-[#757C9D] text-lg md:text-xl font-inter-regular'>Get The Best Advise and Reach Heights in Your Business</p>
       <section className='flex flex-wrap items-center justify-between gap-6 mt-[50px]'>

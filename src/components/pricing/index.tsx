@@ -5,7 +5,7 @@ import type { itemProps } from '../../types';
 
 const Pricings = () => {
   return (
-    <div className='py-50 px-5 w-screen min-h-dvh h-auto relative'>
+    <div id="pricing" className='py-50 px-5 w-screen min-h-dvh h-auto relative'>
       <h1 className='text-left md:text-center text-[#2A2E45] text-4xl md:text-[2.875em] font-inter-extrabold'>No Pockets will be Hurt in the Process!</h1>
       <p className='text-[#585F81] text-left md:text-center font-inter-regular text-lg md:text-xl'>We have Planned Affordable ERP Solutions that are Designed to Grow Your Business Without Breaking the Bank.</p>
       <div className='w-full h-auto flex items-start justify-center flex-wrap gap-40 md:gap-2 mt-30'>

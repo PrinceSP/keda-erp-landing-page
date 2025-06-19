@@ -41,7 +41,7 @@ const Solutions = () => {
   })
   
   return (
-    <div ref={solutionContainer} className="w-screen min-h-dvh relative flex flex-col items-start gap-10 px-20 mb-10">
+    <div id="about" ref={solutionContainer} className="w-screen min-h-dvh relative flex flex-col items-start gap-10 px-20 mb-10">
       <div>
         <h1 ref={headlineRef} className="font-inter-bold text-3xl md:text-[2.875em] text-[#2A2E45] md:-translate-x-[30em]">ERP Solutions Installation Options:</h1>
         <h1 ref={prodHeadline2} className="font-inter-bold text-3xl md:text-[2.875em] text-[#2A2E45] md:-translate-x-[15em]">Online Cloud or Thin Offline</h1>
