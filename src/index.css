@@ -27,12 +27,15 @@ body.no-scroll {
   --font-inter-medium: "inter-medium";
   --font-inter-regular: "inter-regular";
   --font-inter-semibold: "inter-semibold";
+  --font-inter-light: "inter-light";
   --color-dark-primary: #1A1A1A;
   --color-hero-box: #E3E3E7;
   --color-floating-nav: #F0F0F0;
   --hero-heading: translate3d(10px, 51px, -60px) rotateY(20deg) rotateX(-40deg);
   --hero-heading-origin: -50% 50% 150px;
   --will-change: opacity, transform;
+  --login-box-shadow: 0 4px 8.4px 0 rgba(182,171,171,0.25);
+  --proshadow: 0 10px 23.4px 0 rgba(222,239,232,0.82);
 }
 
 @layer base {
@@ -70,6 +73,11 @@ body.no-scroll {
     font-family: "inter-semibold";
     src: url("/fonts/Inter-SemiBold.ttf") format("truetype");
   }
+  
+  @font-face {
+    font-family: "inter-light";
+    src: url("/fonts/Inter-Light.ttf") format("truetype");
+  }
 }
 
 @layer utilities {
@@ -90,7 +98,7 @@ body.no-scroll {
   }
 
   .hero-heading {
-    @apply w-[70%] md:w-full text-[#111827] font-inter-bold text-3xl sm:right-10 lg:text-6xl;
+    @apply w-full text-[#111827] font-inter-bold text-4xl sm:right-10 md:text-5xl lg:text-6xl;
   }
 
   .animated-hero-heading {
