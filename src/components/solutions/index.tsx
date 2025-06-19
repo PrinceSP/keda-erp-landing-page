@@ -20,8 +20,7 @@ const Solutions = () => {
           trigger: solutionContainer.current,
           start: '-200 bottom',
           end: 'center bottom',
-          toggleActions: 'play none none none',
-          markers:true
+          toggleActions: 'play none none none'
         }
       })
       productTimeline.to(descRef.current, {
