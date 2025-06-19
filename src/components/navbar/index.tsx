@@ -112,9 +112,11 @@ const Navbar = ({ openModal }) => {
                 <MdArrowOutward color="#FFD700" size="0.875em" />
               </button>
 
-              <button type="button" className="flex items-center btn-outlined bg-[#EDE9FE] !border-none font-inter-bold">
-                <p className="text-[0.875em] text-[#803FEE]">Log in</p>
-              </button>
+              <NavLink to="/sign-in">
+                <button type="button" className="flex items-center btn-outlined bg-[#EDE9FE] !border-none font-inter-bold">
+                  <p className="text-[0.875em] text-[#803FEE]">Log in</p>
+                </button>
+              </NavLink>
             </div>
           </div>
 
