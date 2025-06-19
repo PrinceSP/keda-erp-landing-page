@@ -40,11 +40,11 @@ const Hero = () => {
   }, [])
 
   return (
-    <main ref={heroContainerRef} className="relative h-dvh w-screen mb-60 md:mb-60">
+    <main ref={heroContainerRef} className="relative flex flex-col md:flex-row max-h-auto min-h-dvh w-screen mb-60 md:mb-60">
       <section className="w-full relative">
         <img src="/illustrations/hero-bg.svg" className="absolute top-0 left-0" />
         <img src="/illustrations/diagonal-block.svg" className="absolute top-112 left-0 animated-hero-box" />
-        <img src="/illustrations/hero-image.svg" alt="Hero Image" className="absolute right-45 top-50 object-cover animated-hero-image" />
+        <img src="/illustrations/hero-image.svg" alt="Hero Image" className="md:absolute right-1/12 top-5/6 lg:right-45 lg:top-50 object-cover animated-hero-image" />
       </section>
 
       <section className="absolute left-0 top-0 z-40">
