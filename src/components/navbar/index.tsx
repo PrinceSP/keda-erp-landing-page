@@ -11,7 +11,6 @@ interface NavbarProps {
 }
 
 const Navbar = ({ openModal }: NavbarProps) => {
-  const [isOpenModal, setIsOpenModal] = useState<boolean>(false)
   const navContainerRef = useRef<HTMLDivElement | null>(null)
   const menuRef = useRef<HTMLDivElement | null>(null)
   const closeBtn = useRef<HTMLButtonElement | null>(null)
@@ -44,8 +43,7 @@ const Navbar = ({ openModal }: NavbarProps) => {
   }
 
   const openContactModal = () => {
-    setIsOpenModal(true)
-    openModal(isOpenModal)
+    openModal(true)
   }
 
   useEffect(() => {
