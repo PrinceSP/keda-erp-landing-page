@@ -20,17 +20,13 @@ describe('ContactForm component', () => {
   it('sets active method on button click', () => {
     render(<ContactForm />)
 
-    // Initial active button should be 'telegram'
     const telegramButton = screen.getByText(/telegram/i).closest('button')
     expect(telegramButton).toHaveClass('bg-[#7C3AED]')
 
-    // Click on 'whatsapp' button
     const whatsappButton = screen.getByText(/whatsapp/i).closest('button')
     fireEvent.click(whatsappButton!)
 
-    // Now 'whatsapp' should be active
     expect(whatsappButton).toHaveClass('bg-[#7C3AED]')
-    // 'telegram' should no longer be active
     expect(telegramButton).toHaveClass('bg-[#F3F3F3]')
   })
 
