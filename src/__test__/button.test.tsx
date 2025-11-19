@@ -3,7 +3,7 @@ import { describe, expect, it, vi } from 'vitest'
 import { FaTelegramPlane } from 'react-icons/fa'
 import Button from '../components/button'
 
-describe('Button component', () => {
+describe('Reusable Button', () => {
   it('renders the button with correct title', () => {
     render(<Button title="Test Button" />)
     expect(screen.getByText('Test Button')).toBeInTheDocument()
